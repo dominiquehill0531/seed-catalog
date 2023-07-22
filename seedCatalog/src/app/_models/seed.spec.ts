@@ -1,7 +1,11 @@
+import { Layer } from './layer';
+import { Plant } from './plant';
 import { Seed } from './seed';
 
 describe('Seed', () => {
+
   it('should create an instance', () => {
-    expect(new Seed()).toBeTruthy();
+    expect(new Seed(new Plant("Black Walnut", Layer.CANOPY), "N/A", 4)).toBeTruthy();
   });
+  
 });
