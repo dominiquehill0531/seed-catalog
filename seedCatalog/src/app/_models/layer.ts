@@ -1,11 +1,11 @@
 export enum Layer {
-    CANOPY = 1,
-    SUBCANOPY,
-    SHRUB,
-    HERBACEOUS,
-    GROuNDCOVER,
-    ROOT,
-    VINE,
-    WATER = 'water',
-    FUNGAL = 'fungal'
+    CANOPY = "CANOPY",
+    SUBCANOPY = "SUBCANOPY",
+    SHRUB = "SHRUB",
+    HERBACEOUS = "HERBACEOUS",
+    GROUNDCOVER = "GROUNDCOVER",
+    ROOT = "ROOT",
+    VINE = "VINE",
+    WATER = "WATER",
+    FUNGAL = "FUNGAL"
 }

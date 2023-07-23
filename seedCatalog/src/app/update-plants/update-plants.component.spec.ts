@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UpdatePlantsComponent } from './update-plants.component';
+import { Plant } from '../_models/plant';
+import { Layer } from '../_models/layer';
+import { Period } from '../_models/period';
 
 describe('UpdatePlantComponent', () => {
   let component: UpdatePlantsComponent;
@@ -23,3 +26,14 @@ describe('UpdatePlantComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+describe('saveNewPlant()', () => {
+  let blackWalnutTree = new Plant("Black Walnut", Layer.CANOPY, Period.PERENNIAL);
+  beforeEach(() => {
+    UpdatePlantsComponent.prototype.saveNewPlant(blackWalnutTree)
+  });
+
+  it('should save Black Walnut (Canopy, Annual) tree to Plant database', () => {
+    expect(UpdatePlantsComponent.prototype.plantList).toContain(blackWalnutTree)
+  });
+})

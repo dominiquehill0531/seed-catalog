@@ -1,1 +1,21 @@
-<p>update-plants works!</p>
+<form>
+
+    <div><label>Name
+        <input type="text">
+    </label></div>
+
+    <div><label>Layer
+        <select id="layer">
+            <option *ngFor="let layer of layerArr">{{ layer }}</option>
+        </select>
+    </label></div>
+
+    <div><label>Periodicity
+        <select id="periodicity">
+            <option *ngFor="let period of periodArr">{{ period }}</option>
+        </select>
+    </label></div>
+
+    <button (submit)="saveNewPlant()">Save New Plant</button>
+
+</form>
