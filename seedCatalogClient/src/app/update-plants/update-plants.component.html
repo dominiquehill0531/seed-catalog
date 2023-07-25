@@ -1,17 +1,24 @@
-<form>
+<form
+  #plantForm="ngForm"
+  name="plantForm"
+  (ngSubmit)="saveNewPlant()"
+>
 
     <div><label>Name
-        <input type="text">
+        <input
+          [(ngModel)]="newPlant.name" name="plantName" type="text"
+          required #name="ngModel"
+        >
     </label></div>
 
     <div><label>Layer
-        <select id="layer">
+        <select [(ngModel)]="newPlant.layer" name="plantLayer">
             <option *ngFor="let layer of layerArr">{{ layer }}</option>
         </select>
     </label></div>
 
     <div><label>Periodicity
-        <select id="periodicity">
+        <select [(ngModel)]="newPlant.periodicity" name="plantPeriod">
             <option *ngFor="let period of periodArr">{{ period }}</option>
         </select>
     </label></div>

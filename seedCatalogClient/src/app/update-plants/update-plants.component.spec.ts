@@ -28,9 +28,9 @@ describe('UpdatePlantComponent', () => {
 });
 
 describe('saveNewPlant()', () => {
-  let blackWalnutTree = new Plant("Black Walnut", Layer.CANOPY, Period.PERENNIAL);
+  let blackWalnutTree = new Plant();
   beforeEach(() => {
-    UpdatePlantsComponent.prototype.saveNewPlant(blackWalnutTree)
+    UpdatePlantsComponent.prototype.saveNewPlant()
   });
 
   it('should save Black Walnut (Canopy, Annual) tree to Plant database', () => {
