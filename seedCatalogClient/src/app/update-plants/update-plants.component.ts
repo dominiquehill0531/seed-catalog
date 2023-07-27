@@ -2,8 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Layer } from '../_models/layer';
 import { Period } from '../_models/period';
 import { Plant } from '../_models/plant';
-import { KeyValuePipe } from '@angular/common';
-import { ControlContainer, FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-update-plants',
