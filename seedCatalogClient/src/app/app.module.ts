@@ -13,6 +13,8 @@ import { UpdatePlantsComponent } from './update-plants/update-plants.component';
 import { UpdateSeedsComponent } from './update-seeds/update-seeds.component';
 import { SearchSeedsComponent } from './search-seeds/search-seeds.component';
 
+import { PlantService } from './_services/plant-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ import { SearchSeedsComponent } from './search-seeds/search-seeds.component';
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PlantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

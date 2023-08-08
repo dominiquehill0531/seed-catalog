@@ -36,9 +36,8 @@ export class UpdatePlantsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-//TODO: Create SpringBoot/MongoDB backend
-//TODO: Create PlantRepository
+
+
 //TODO: Refactor saveNewPlant() via backend
 //TODO: Run tests
   saveNewPlant(): void{

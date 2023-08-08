@@ -22,4 +22,6 @@ public interface PlantRepo extends MongoRepository<Plant, String> {
 
     public long count();
 
+    public Plant save(Plant newPlant);
+
 }
