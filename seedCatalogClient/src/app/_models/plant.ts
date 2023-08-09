@@ -3,13 +3,8 @@ import { Period } from "./period";
 
 export class Plant {
 
-    name!: string;
+    name!: String;
     layer!: Layer;
     periodicity!: Period;
 
-    // constructor(aName: string, aLayer: Layer, period: Period) {
-    //     this.name = aName;
-    //     this.layer = aLayer;
-    //     this.periodicity = period;
-    // }
 }
