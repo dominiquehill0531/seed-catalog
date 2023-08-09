@@ -28,16 +28,19 @@ public class PlantController {
     @Autowired
     private PlantRepo plantRepo;
 
+    @PostMapping("/create")
     public ResponseEntity<?> createPlant(@RequestBody Plant newPlant) {
         
         if (!plantRepo.existsById(newPlant.getName())) {
-            plantRepo.save(newPlant);
+            try {
+                plantRepo.save(newPlant);
+            } catch (Exception e) {;
+                return ResponseEntity.badRequest().body(e.getMessage());
+            }
         } else {
-            return ResponseEntity.badRequest().body("Plant already exists in database.");
+            return ResponseEntity.badRequest().body(new Error("Plant already exists in database."));
         }
         return ResponseEntity.ok().body(newPlant);
-
     }
-
 
 }
