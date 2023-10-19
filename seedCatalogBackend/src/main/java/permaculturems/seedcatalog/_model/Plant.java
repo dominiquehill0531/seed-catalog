@@ -23,7 +23,7 @@ public class Plant {
         this.periodicity = aPeriod;
     }
 
-    //G&S&=
+    // Getters & Setters
 
 
     public String getName() {
