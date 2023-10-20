@@ -14,24 +14,23 @@ class SeedcatalogApplicationTests {
 
 	private static final String HOST = "localhost";
 	private static final String PORT = "27017";
-	private static final String DB = "baeldung";
-	private static final String USER = "admin";
-	private static final String PASS = "password";
+	private static final String DB = "SeedCatalog";
 
 	
 	@Test
 	void contextLoads() {
 	}
 
-	private void assertInsertSucceeds(ConfigurableApplicationContext context) {
+	@Test
+	void assertMongoInsertSucceeds(ConfigurableApplicationContext context) {
     String name = "A";
 
     MongoTemplate mongo = context.getBean(MongoTemplate.class);
     Document doc = Document.parse("{\"name\":\"" + name + "\"}");
-    Document inserted = mongo.insert(doc, "items");
+    Document inserted = mongo.insert(doc, "test");
 
     assertNotNull(inserted.get("_id"));
     assertEquals(inserted.get("name"), name);
-}
+	}
 
 }
