@@ -19,4 +19,8 @@ export class PlantService {
     console.log(`Creating ${newPlant.name}...`);
     return this.httpClient.post(`${this.baseUrl}/create`, newPlant, this.httpOptions);
   }
+
+  listAllPlants(): Observable<Object> {
+    return this.httpClient.get(`${this.baseUrl}/plantList`, this.httpOptions);
+  }
 }

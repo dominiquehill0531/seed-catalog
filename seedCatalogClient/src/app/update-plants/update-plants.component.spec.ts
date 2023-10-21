@@ -6,9 +6,12 @@ import { Plant } from '../_models/plant';
 import { Layer } from '../_models/layer';
 import { Period } from '../_models/period';
 import { ViewChild } from '@angular/core';
+import { PlantService } from '../_services/plant-service.service';
+import { HttpClient } from '@angular/common/http';
 
 let component: UpdatePlantsComponent;
 let fixture: ComponentFixture<UpdatePlantsComponent>;
+let plantService: PlantService;
 
 describe('UpdatePlantComponent', () => {
 
@@ -39,6 +42,7 @@ describe('UpdatePlantComponent', () => {
 describe('saveNewPlant()', () => {
 
   let blackWalnut = new Plant();
+  let plantList = plantService.listAllPlants();
 
   beforeEach(() => {
     blackWalnut.name = "Black Walnut";
@@ -50,7 +54,7 @@ describe('saveNewPlant()', () => {
     component.newPlant = blackWalnut;
     component.saveNewPlant();
     fixture.detectChanges();
-    expect(component.plantList).toContain(blackWalnut)
+    expect(plantList).toContain(blackWalnut)
   });
 
 })
